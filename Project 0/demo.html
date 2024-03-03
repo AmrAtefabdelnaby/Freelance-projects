@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce website</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+      :root{
+    --main_color:rgb(125, 166, 41);
+}
+
+*{
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    padding: 0%;
+    margin: 0;
+}
+
+
+.row{
+    width: 85%;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.contact-bar .icon{
+    color: white;
+    padding-right: 1px;
+}
+
+.contact-bar .text{
+    color: white;
+    font-size: 12px;
+    line-height: 28px;
+}
+
+.contact-bar{
+    padding-top: 8px;
+    background-color: var(--main_color)
+}
+
+.contacts a{
+    color: white;
+}
+
+.contact-bar .contacts .dropdown-toggle{
+    background-color: var(--main_color);
+    color: white;
+    border: 0;
+    margin-top: -7px;
+}
+
+.dropdown-menu a{
+    background-color: white;
+    color: black;
+}
+
+.dropdown-menu a:hover{
+    color: var(--main_color);
+    background-color: white;
+
+}
+
+.logo{
+    width: 100%;
+
+}
+
+.brand-logo{
+    width: 102px;
+    margin-top: 8px;
+    padding-left: 0px;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+}
+
+
+.search-bar img{
+    width: 10%;
+    height: 80px;
+}
+
+
+.page-nav{
+    margin-top: -13px;
+}
+
+
+
+.user-logo ,.cart-logo{
+    border: 1px black solid;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.cart-links span {
+    padding: 8px;
+    width: 100px;
+    height: 40px;
+}
+
+.account-icon span{
+    padding:0px 8px 0px 8px  ;
+}
+
+.account-setting,.cart{
+    width: 204px;
+}
+
+.cart-logo{
+    position: relative;
+}
+
+
+.counter{
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--main_color);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.4;
+    color: white;
+    position: absolute;
+    right: -10px;
+    top: -12px;
+}
+
+#lang-button , #currency-button{
+    width: 130px;
+}
+
+
+
+.categories-menu{
+    border: 1px solid black;
+    position: relative;
+    
+}
+.categories-button{
+    border: 1px solid black;
+    background-color:var(--main_color) ;
+    width: 345px;
+}
+
+.category-text{
+    color: white;
+    width: 100%;
+    text-align: start;
+}
+
+.category-text:hover,
+.category-text:active,
+.category-text:focus{
+    color: white!important;
+    border: 0px;
+}
+
+.category-text::after{
+    display: none;
+}
+
+.category-text .bar-logo{
+    position: absolute;
+    top: 10px;
+    right:10px;
+}
+
+.category-menu{
+    width: 100%;
+    border-radius: 0%;
+}
+
+.category-menu li{
+    padding: 8px 0px 8px 0px;
+    border-bottom: 1px #00000038 solid;
+    font-size: 16px;
+}
+
+.category-toggle-button{
+    color: #413f3f;
+    border: 1px solid black;
+    padding: 7px;
+    font-size: 31px;
+}
+
+
+ul{
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+}
+
+li{
+    cursor: default;
+}
+
+a{
+    cursor: pointer;
+}
+
+li:hover{
+    color: rgb(125, 166, 41);
+}
+
+.container-navbar{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 85%;
+    margin: auto;
+    
+}
+
+#main-navbar{
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0px;
+    margin-left:18px;
+    font-size: 20px !important;
+    font-weight: 200 !important;
+    padding: 0%;    
+
+}
+
+
+#main-navbar li span{
+    margin-right: 3px;
+}
+
+
+#main-navbar li{
+    height: 45px;
+    margin-right: 20px;    
+    transition: all ease-in-out 0.5s;
+    display: flex;
+    align-items: center;
+    color: white;
+
+}
+
+
+.container-main-nav{
+    background-color: #000000ad;
+}
+
+
+#categories-button{
+    width: 325px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(125, 166, 41);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+
+
+
+#categories-button{
+    margin: 0%;
+    height: 45px;
+    padding: 10px 20px 10px 4px;
+    font-size: 20px;
+    transition: all ease-in-out 0.5s;
+    display: flex;
+    align-items: center;
+    border: 0px;
+
+}
+
+.active{
+    color: rgb(125, 166, 41);
+
+}
+
+
+#category-list{
+    border: 1px solid black;
+    width: 325px;
+    margin: 0%;
+    list-style: none;
+    padding: 0%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+    background-color: white;
+
+
+}
+
+
+#category-list li{
+    padding: 15px 20px 12px 5px;
+    border-bottom: 1px rgba(0, 0, 0, 0.240) solid;
+    transition: all ease-in-out ;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.container-categorymenu{
+    position: relative;
+    width: 100%;
+}
+
+.category-section{
+    width: 325px;
+}
+
+
+#another-women-list{
+    background-color: white;
+    position: absolute;
+    top: 174px;
+    left: 330px;
+    box-shadow: -1px 0px 0px 0px rgb(125, 166, 41);    
+    width: 665px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding: 8px;
+    display: none;
+}
+
+
+#women-list{
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: 330px;
+    box-shadow: -1px 0px 0px 0px rgb(125, 166, 41);    
+    width: 665px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding: 8px;
+    display: none;
+    
+}
+
+#women-list li,
+#another-women-list li{
+    border: 0px;
+    font-size: 16px;
+    margin-top: 8px;
+    color: black;
+    transition: all 0.5s ease-in-out;
+    padding: 0%;
+
+}
+
+#women-list li:hover,
+#another-women-list li:hover{
+    color: var(--main_color);
+    transform: translateX(5px);
+    box-shadow: -1px 0px 0px var(--main_color);
+}
+.divider-womenlist{
+    width: 100%;
+    color: rgba(0, 0, 0, 0.211);
+}
+
+.img-womenlist{
+    width: 100%;
+    height: auto;
+}
+
+.links-womenlist{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0%;
+    
+}
+
+.links-list{
+    padding: 0%;
+    margin-right: 0px;
+    margin-top: 0%;
+}
+
+.links-list span{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+#Pages-list{
+    background-color: white;
+    position: absolute;
+    top: 45px;
+    right: -55px;
+    padding: 8px;
+    width: 180px;
+    display: none;
+    border: 1px black solid;
+}
+
+#Pages-list .Pageslist-item{
+    color: black;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+#Pages-list .Pageslist-item:hover{
+    color: var(--main_color);
+}
+
+#pages-button,
+#menlist-container{
+    position: relative;
+}
+
+#men-list{
+    position: absolute;
+    width: 1000px;
+    top: 45px;
+    left: -400px;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    padding: 8px;
+    display: none;
+    
+}
+
+#men-list .men-item{
+    color: black;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+#men-list .men-item:hover{
+    color: var(--main_color);
+}
+
+.women-brand{
+
+    background-image: url(../main-imgs/banner06.jpg);
+}
+
+.man-brand{
+    background-image: url(../main-imgs/banner07.jpg);
+
+}
+
+.accessories-brand{
+    background-image: url(../main-imgs/banner08.jpg);
+
+}
+
+.bags-brand{
+    background-image: url(../main-imgs/banner09.jpg);
+
+}
+
+
+.brands-imgs{
+    width: 100%;
+    padding: 10px 0px 8px 0px;
+    margin-right: 0px!important;
+    height: 111px!important;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.present-brand{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: calc(95%/4)!important;
+    height: 108px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.manlist-divider{
+    color: #0c0c0c;
+}
+
+
+.men-links .links-list li{
+    font-size: 16px;
+    color: black !important;
+    transition: all 0.5s ease-in-out !important;
+
+}
+
+.men-links .links-list li:hover{
+    color: var(--main_color) !important;
+    transform: translateX(5px);
+    box-shadow: -1px 0px 0px var(--main_color);
+}
+
+
+#phonesbutton{
+    position: relative;
+}
+
+#phones-list{
+    position: absolute;
+    background-color: white;
+    top: -54px;
+    left: 329px;
+    border-left: var(--main_color) 1px solid;
+    display: flex !important;
+    justify-content: space-between;
+    padding: 8px;
+    display: none !important;
+
+}
+
+#phones-list .links-list{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    width: 250px;
+    border: 0px;
+
+}
+
+#phones-list .links-list .links{
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0%;
+}
+
+.phoneslist-divider{
+    color: rgba(0, 0, 0, 0.479);
+    width: 100%;
+}
+
+#phones-list .links-list .links li{
+    padding: 4px 0px 4px 0px;
+    transition: all ease-in-out 0.5s;
+    color: #0c0c0c;
+    border-bottom: 0px;
+}
+
+#phones-list .links-list .links li:hover{
+    color: var(--main_color);
+    transform: translateX(5px);
+    border-left: 1px solid var(--main_color);
+    
+}
+
+
+#phones-list .links-list .links span{
+    font-size: 25px;
+    font-weight: 900;
+}
+
+
+#phones-list .img-container {
+    background-position-x: center;
+    color: white;
+    width: 200px;
+    height: 485px;
+    padding: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 20px;
+    font-weight: 700;
+    background-image: url(../main-imgs/banner04.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#phone-text{
+    width: 100%;
+    margin-right: 92px;
+}
+
+
+#sidebar-menu{
+    
+    width: 119px;
+    height: 263px;
+    background-color: var(--main_color);
+    position: absolute;
+    top: 224px;
+    left: -102px;
+    transition: all ease-in-out 1s;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+#sidebar-menu .sidebar-items{
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#sidebar-menu:hover{
+    transform: translateX(102px);
+}
+
+    </style>
+
+</head>
+
+<body>
+  <!-- CONTACT BAR -->
+    
+  <div class="contact-bar container-fluid">
+    <div class="row">
+      <div class="news col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start align-content-center">
+      
+              <div class="icon ">
+                  <svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m6 14c-.1494 0-.31896 0-.49965 0-1.38071 0-2.50035-1.1193-2.50035-2.5 0-1.3807 1.11929-2.5 2.5-2.5h.5m0 5c-.57706 0-1.06953.4172-1.1644.9864l-.63002 3.7801c-.10761.6457.39032 1.2335 1.04492 1.2335.44914 0 .84946-.2832.99895-.7068l1.75055-4.9599m-2-.3333c.00002-1.7085 0-5 0-5m0 5 6 1m-6-6 6-1m0 0 4-2v11l-4-2m0-7v7m7-4h2m-2-4 2-1m-2 9 2 1" stroke="WHITE" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+      
+              <span class="text"> WHATEVER YOU'VE GOT IN MIND - WE'VE GOT INSIDE</span>
+      
+      </div>
+      
+      <div class="contacts col-lg-6 col-md-12 col-sm-12  d-flex justify-content-between">
+      
+          <div class="appstore">
+              <i class="fa-brands fa-app-store-ios" style="color: #ffffff;"></i>
+              <a href=""class="text-decoration-none">App store</a>
+          </div>
+          <div class="googlestore">
+              <i class="fa-brands fa-google-play" style="color: #ffffff;"></i>
+              <a href=""class="text-decoration-none">Google store</a>
+          </div>
+          
+          <div class="dropdown">
+              <button id="lang-button" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  English(ENG)
+              </button>
+              <ul class="dropdown-menu ">
+                <li><a class="dropdown-item lang-item english" id="en" href="#">English(ENG)</a></li>
+                <li><a class="dropdown-item lang-item russian" href="#">Russian(RU)</a></li>
+                <li><a class="dropdown-item lang-item france" href="#">France(FR)</a></li>
+                <li><a class="dropdown-item lang-item france" href="#">Spanish(ES)</a></li>
+              </ul>
+          </div>
+          
+          <div class="dropdown ">
+              <button id="currency-button" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  USD($)
+              </button>
+              <ul class="dropdown-menu ">
+                  <li><a class="dropdown-item curr-item " id="en" href="#">USD($)</a></li>
+                  <li><a class="dropdown-item curr-item" href="#">EUR(€)</a></li>
+              </ul>
+          </div>
+      
+      </div>
+
+    </div>
+        
+
+
+  </div>
+    
+    <!-- PAGE NAVBAR -->
+    
+<div class="page-navbar container-fluid">
+    <div class="row m-auto mt-sm-2 d-flex justify-content-lg-between">
+        <a class="brand-logo col-lg-2 col-xs-12 " href="#">
+            <img src="assets/main-imgs/wepik-fashion-brand-logo-20240203121545XlRQ.png"class="logo"alt="">
+        </a>
+
+        <div class="search-bar p-0 col-lg-6 col-xs-12">
+    
+            <form class="container-fluid">
+                <div class="input-group">
+                  
+                  <span class="input-group-text p-0" id="basic-addon1">
+                      
+                      <div class="dropdown">
+                          <button class="btn dropdown-toggle " id="filter-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Product
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li><button class="dropdown-item filter-item" type="button">Product</button></li>
+                            <li><button class="dropdown-item filter-item" type="button">Supplier</button></li>
+                            <li><button class="dropdown-item filter-item" type="button">All</button></li>
+                          </ul>
+                      </div>
+                  </span>
+  
+                  <input type="text"  class="form-control w-25" placeholder="Enter your keyword..." aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+              </form>
+          
+        </div>
+
+        
+        <ul class="nav-links navbar-nav col-lg-3 col-xs-12 d-flex flex-row justify-content-around">
+          
+          <li class="nav-item account-setting d-flex justify-content-center align-items-center">
+            
+            <a class="nav-link active d-flex " aria-current="page" href="#">
+              <i class="fa-solid fa-user user-logo" style="color: #7da629;"></i>
+            </a>
+            
+            <div class="account-icon d-flex flex-column">
+              <span class="dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <b>
+                    My Account
+                  </b>
+                      </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  
+                        </ul>
+                    </span>
+
+                    <span>
+                      <a class="nav-link" href="#">LOGIN / JOIN</a>
+                    </span>
+                </div>
+
+          </li>
+
+
+          <li class="cart mt nav-item d-flex justify-content-end align-items-center">
+                
+            <a class="nav-link active d-flex " aria-current="page" href="#">
+                <i class="fa-solid fa-cart-shopping cart-logo" style="color: #7da629;">
+                    <span class="counter">
+                        0
+                    </span>
+                </i>
+            </a>
+            
+           
+            <div class="cart-links d-flex flex-column">
+                <span>
+                    <a href="cart.html" class="text-black fw-bold">
+                        MY CART
+                    </a>
+                </span>
+
+                <span>
+                  35.20 EGP
+                </span>
+            </div>
+
+          </li>
+
+         <!-- toggle button for category menu -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ourcategorymenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i class="fa-solid category-toggle-button d-lg-none fa-bars"></i>
+            </span>
+            </button>
+
+        </ul>
+    </div>
+</div>
+
+
+<!-- WEB SECTIONS NAVBAR -->
+
+<div class="container-main-nav container-fluid">
+  <div class="container-navbar">
+  
+    <div class="category-section">
+      <button id="categories-button">
+        <span >
+          Categories
+        </span>
+        <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+      </button>
+      
+      <!-- Category dropdown list -->
+      <div class="container-categorymenu">
+        <ul id="category-list">
+          
+          <li id="womenClothingButton">
+            <span>
+              WOMEN'S CLOTHING
+            </span>
+            <i class="fa-solid fa-angle-right"></i>
+            
+            <!-- WOMEN'S dropdown LIST  -->
+            <div id="women-list">
+              <div class="links-womenlist">
+                
+                <ul class="links-list">
+                  <span>Categories</span>
+                  <li>WOMEN CLOTHING</li>
+                  <li>MEN CLOTHING</li>
+                  <li>JEWELERY & WATCHES</li>
+                  <li>BAGS & SHOES</li>
+                </ul>
+          
+                <ul class="links-list">
+                  <span>Categories</span>
+                  <li>WOMEN CLOTHING</li>
+                  <li>MEN CLOTHING</li>
+                  <li>JEWELERY & WATCHES</li>
+                  <li>BAGS & SHOES</li>
+                </ul>
+          
+                <ul class="links-list">
+                  <span>Categories</span>
+                  <li>WOMEN CLOTHING</li>
+                  <li>MEN CLOTHING</li>
+                  <li>JEWELERY & WATCHES</li>
+                  <li>BAGS & SHOES</li>
+                </ul>
+          
+              </div>
+          
+              <hr class="divider-womenlist">
+          
+              <img src="assets/main-imgs/banner05.jpg" class="img-womenlist" alt="">
+            </div>
+          </li>
+          
+          <li>MEN'S CLOTHING</li>
+          
+          
+
+          <li id="phonesbutton" >
+                      
+            <span id="phone-text">
+                PHONES and ACCECORIES
+            </span>
+              
+            <i class="fa-solid fa-angle-right"></i>
+            
+
+            <ul id="phones-list">
+              
+              <li class="links-list">
+                    <ul class="links">
+                        <span>Categories</span>
+                        <li>WOMEN'S CLOTHING</li>
+                        <li>MEN'S CLOTHING</li>
+                        <li>PHONES & ACCESSORIES</li>
+                        <li>JEWELRY & WATCHES</li>
+                        <li>BAGS & SHOES</li>
+                    </ul>
+
+                    <hr class="phoneslist-divider">
+
+                    <ul class="links">
+                        <span>Categories</span>
+                        <li>WOMEN'S CLOTHING</li>
+                        <li>MEN'S CLOTHING</li>
+                        <li>PHONES & ACCESSORIES</li>
+                        <li>JEWELRY & WATCHES</li>
+                        <li>BAGS & SHOES</li>
+                    </ul>
+
+              </li>
+
+
+              <li class="links-list">
+                    <ul class="links">
+                        <span>Categories</span>
+                        <li>WOMEN'S CLOTHING</li>
+                        <li>MEN'S CLOTHING</li>
+                        <li>PHONES & ACCESSORIES</li>
+                        <li>JEWELRY & WATCHES</li>
+                        <li>BAGS & SHOES</li>
+                    </ul>
+
+                    <hr class="phoneslist-divider">
+                    
+                    <ul class="links">
+                        <span>Categories</span>
+                        <li>WOMEN'S CLOTHING</li>
+                        <li>MEN'S CLOTHING</li>
+                        <li>PHONES & ACCESSORIES</li>
+                        <li>JEWELRY & WATCHES</li>
+                        <li>BAGS & SHOES</li>
+                    </ul>
+              </li>
+    
+              
+              <li class="img-container">
+                  
+                  <span>
+                    NEW 
+                  </span>
+                  <span>
+                    COLLECTIONS
+                  </span>
+              </li>
+
+            </ul>
+    
+          </li>
+          
+          
+          <li>COMPUTER & OFFICE</li>
+          
+
+          
+          <li>CONSUMER ELECTRONICS</li>
+
+          
+          <li id="jewelerybutton">
+            <span>
+              JEWELERY & WATCHES
+            </span>
+            <i class="fa-solid fa-angle-right"></i>
+          
+            
+          </li>
+          
+          <li>BAGS & SHOES</li>
+          
+          <li>VIEW ALL</li>
+          
+        </ul>
+      </div>
+    </div>
+    
+  
+    <!-- main navbar -->
+    
+    <ul id="main-navbar">
+      <li>HOME</li>
+      
+      <li>SHOP</li>
+      
+      <!-- another women list -->
+
+      <li id="anotherWomenListButton">
+        <span>
+          WOMEN
+        </span>
+        <i class="fa-solid fa-sort-down"></i>
+
+        <div id="another-women-list">
+          <div class="links-womenlist">
+            
+            <ul class="links-list">
+              <span>Categories</span>
+              <li>WOMEN CLOTHING</li>
+              <li>MEN CLOTHING</li>
+              <li>JEWELERY & WATCHES</li>
+              <li>BAGS & SHOES</li>
+            </ul>
+      
+            <ul class="links-list">
+              <span>Categories</span>
+              <li>WOMEN CLOTHING</li>
+              <li>MEN CLOTHING</li>
+              <li>JEWELERY & WATCHES</li>
+              <li>BAGS & SHOES</li>
+            </ul>
+      
+            <ul class="links-list">
+              <span>Categories</span>
+              <li>WOMEN CLOTHING</li>
+              <li>MEN CLOTHING</li>
+              <li>JEWELERY & WATCHES</li>
+              <li>BAGS & SHOES</li>
+            </ul>
+
+            
+            
+          </div>
+          <hr class="divider-womenlist">
+        
+          <img src="assets/main-imgs/banner05.jpg" class="img-womenlist" alt="">
+      </li>
+      <!-- man section -->
+
+      <li id="menlist-container">
+        
+        <div id="menlist-button">
+          <span>
+            MEN
+          </span>
+          <i class="fa-solid fa-sort-down"></i>
+        </div>
+        <!-- men dropdown List -->
+       
+        <ul id="men-list">
+        
+          <li class="men-item brands-imgs">
+            <a href="" class="present-brand women-brand">
+              WOMEN'S
+            </a>
+            
+            <a href="" class="present-brand man-brand">
+              MEN'S
+            </a>
+            
+            <a href="" class="present-brand accessories-brand">
+              ACCECORIES'S
+            </a>
+            
+            <a href="" class="present-brand bags-brand">
+              BAG'S
+            </a>
+          </li>
+
+          <hr class="divider-womenlist">
+
+          <div class="men-links d-flex justify-content-between">
+            <ul class="links-list">
+              <span>Categories</span>
+              <li>WOMEN CLOTHING</li>
+              <li>MEN CLOTHING</li>
+              <li>JEWELERY & WATCHES</li>
+              <li>BAGS & SHOES</li>
+            </ul>
+      
+            <ul class="links-list">
+              <span>Categories</span>
+              <li>WOMEN CLOTHING</li>
+              <li>MEN CLOTHING</li>
+              <li>JEWELERY & WATCHES</li>
+              <li>BAGS & SHOES</li>
+            </ul>
+      
+            <ul class="links-list">
+              <span>Categories</span>
+              <li>WOMEN CLOTHING</li>
+              <li>MEN CLOTHING</li>
+              <li>JEWELERY & WATCHES</li>
+              <li>BAGS & SHOES</li>
+            </ul>
+
+            
+            <ul class="links-list">
+              <span>Categories</span>
+              <li>WOMEN CLOTHING</li>
+              <li>MEN CLOTHING</li>
+              <li>JEWELERY & WATCHES</li>
+              <li>BAGS & SHOES</li>
+            </ul>
+          </div>
+
+          
+        </ul>
+        
+      </li>
+      
+      <li>SALES</li>
+      
+      <li id="pages-button">
+        <span>
+          PAGES
+        </span>
+        <i class="fa-solid fa-sort-down"></i>
+        <!-- Pages dropdown List -->
+        <div id="Pages-list">
+          <ul>
+            <li class="Pageslist-item">HOME</li>
+            <li class="Pageslist-item">PRODUCTS</li>
+            <li class="Pageslist-item">PRODUCT DETAILS</li>
+            <li class="Pageslist-item">CHECKOUT</li>
+          </ul>
+        </div>
+        
+  
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+
+<div id="sidebar-menu">
+  <div class="sidebar-items">
+    <i class="fa-solid fa-house"></i>
+    <span>HOME</span>
+  </div>
+
+  <div class="sidebar-items">
+    <i class="fa-solid fa-shirt"></i>
+    <span>CLOTHES</span>
+  </div>
+
+  <div class="sidebar-items">
+    <i class="fa-solid fa-socks"></i>
+    <span>SHOES</span>
+  </div>
+
+  <div class="sidebar-items">
+    <i class="fa-solid fa-gift"></i>
+    <span>GIFTS</span>
+  </div>
+  
+</div>
+
+
+<script>
+      var langItems = document.querySelectorAll('.lang-item');
+    langItems.forEach((el)=> {
+        el.addEventListener("click", function() {
+            var langButton = document.getElementById("lang-button");
+            langButton.innerHTML = el.innerHTML;
+        });
+    });
+
+
+
+    var currencyItems = document.querySelectorAll('.curr-item');
+    currencyItems.forEach((el)=> {
+        el.addEventListener("click", function() {
+            var currencyButton = document.getElementById("currency-button");
+            currencyButton.innerHTML = el.innerHTML;
+        });
+    });
+
+
+
+    var filterItems = document.querySelectorAll('.filter-item');
+    filterItems.forEach((el) =>{
+        el.addEventListener("click", function() {
+            var filterButton = document.getElementById("filter-button");
+            filterButton.innerHTML = el.innerHTML;
+        });
+    });
+
+    
+
+// category dropdwon menu
+var categoryButton = document.getElementById("categories-button");
+var categoriesMenu = document.getElementById("category-list");
+categoryButton.addEventListener("click", function(event) {
+  if (categoriesMenu.style.display === "block") {
+      categoriesMenu.style.display = "none"
+  }else{
+      categoriesMenu.style.display = "block"
+      PagesList.style.display="none"
+      anotherWomenClothingList.style.display="none"
+      menList.style.display="none"
+  }
+
+});
+
+// pages dropdwon menu
+
+var pagesButton=document.getElementById("pages-button")
+var PagesList= document.getElementById("Pages-list")
+pagesButton.addEventListener("click",function (e) {
+    if (PagesList.style.display==="block") {
+        PagesList.style.display="none"
+    }else{
+        PagesList.style.display="block"
+        categoriesMenu.style.display="none"
+        menList.style.display="none"
+        anotherWomenClothingList.style.display="none"
+    }
+})
+
+// phones & jewelery dropdown menu
+var phonesButton = document.getElementById("phonesbutton");
+var phonesList = document.getElementById("phones-list");
+
+phonesButton.addEventListener("click", function(e) {
+    if (phonesList.style.display === "block") {
+        phonesList.style.display = "none";
+    } else {
+        phonesList.style.display = "block";
+        womenClothingList.style.display = "none";
+        menList.style.display = "none";
+        anotherWomenClothingList.style.display = "none";
+        PagesList.style.display = "none";
+    }
+});
+
+
+// women clothing dropdwon menu
+
+var womenClothingButton=document.getElementById("womenClothingButton")
+var womenClothingList=document.getElementById("women-list")
+
+womenClothingButton.addEventListener("click",function (e) {
+    if (womenClothingList.style.display==="none") {
+        womenClothingList.style.display="block"
+    }else{
+        womenClothingList.style.display="none"
+        categoriesMenu.style.display="none"
+        PagesList.style.display="none"
+        menList.style.display="none"
+        anotherWomenClothingList.style.display="none"
+        phonesList.style.display="none"
+
+
+    }
+    
+})
+
+// another women clothing dropdwon menu
+var anotherWomenListButton=document.getElementById("anotherWomenListButton")
+var anotherWomenClothingList=document.getElementById("another-women-list")
+
+anotherWomenListButton.addEventListener("click",function (e) {
+    if (anotherWomenClothingList.style.display==="block") {
+        anotherWomenClothingList.style.display="none"
+    }else{
+        anotherWomenClothingList.style.display="block"
+        womenClothingList.style.display="none"
+        categoriesMenu.style.display="none"
+        PagesList.style.display="none"
+        menList.style.display="none"
+        phonesList.style.display="none"
+
+    }
+    
+})
+
+
+// man list dropdown menu
+
+var menListButton=document.getElementById("menlist-button")
+var menList= document.getElementById("men-list")
+menListButton.addEventListener("click", function() {
+    if (menList.style.display === "block") {
+        menList.style.display = "none";
+    } else {
+        menList.style.display = "block";
+        categoriesMenu.style.display="none"
+        womenClothingList.style.display="none"        
+        PagesList.style.display="none"
+        anotherWomenClothingList.style.display="none"
+        phonesList.style.display="none"
+    }
+})
+
+
+
+
+
+
+
+
+// Active function for main menu items
+var mainMenuItem=document.querySelectorAll("#main-navbar li")
+mainMenuItem.forEach((el) => {
+    el.addEventListener("click", function() {
+        mainMenuItem.forEach((item) => {
+            item.classList.remove("active");
+        });
+        el.classList.add("active");
+    });
+});
+
+
+// Active function for Category menu items
+
+var categoryListItem = document.querySelectorAll("#category-list li")
+categoryListItem.forEach((el) => {
+    el.addEventListener("click", function() {
+        categoryListItem.forEach((item) => {
+            item.classList.remove("active");
+        });
+        el.classList.add("active");
+    });
+});
+
+
+</script>
+
+
+  <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+  <script src="assets/Js/script.js"></script>
+</body>
+</html> 
