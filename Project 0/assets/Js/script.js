@@ -207,25 +207,20 @@ topCollectionItems.forEach((el) => {
 
 // timer
 function makeTimer() {
-    var endTime = new Date("15 September 2024 9:56:00 GMT+01:00");
+    var endTime = new Date("09 march 2024 9:56:00 GMT+01:00");
     endTime = endTime / 1000;
 
-    // Get the current time
     var now = new Date();
     now = now / 1000;
 
-    // Calculate the time remaining
     var timeLeft = endTime - now;
 
-    // Calculate days, hours, minutes, and seconds
     var days = Math.floor(timeLeft / 86400);
     var hours = Math.floor((timeLeft - days * 86400) / 3600);
     var minutes = Math.floor((timeLeft - days * 86400 - hours * 3600) / 60);
     var seconds = Math.floor(timeLeft - days * 86400 - hours * 3600 - minutes * 60);
 
     
-
-    // Update HTML elements
     document.getElementById("days").innerHTML = days ;
     document.getElementById("hours").innerHTML = hours ;
     document.getElementById("minutes").innerHTML = minutes ;
@@ -235,4 +230,109 @@ function makeTimer() {
 setInterval(() => {
     makeTimer();   
 }, 1000);
+
+// rate stars Action
+function rateStarsAction(selector) {
+    
+    var ratingStars=document.querySelectorAll(selector)
+    ratingStars.forEach((el)=>{
+        el.addEventListener("click",function () {
+            
+            var value = this.getAttribute("data-value")
+            ratingStars.forEach((el,index) => {
+                if (index<value) {
+                    el.classList.add("fa-solid")
+                    
+                }else{
+                    el.classList.remove("fa-solid")
+                }
+                
+            });
+        })
+
+    })
+    
+}
+
+
+rateStarsAction(".NewProductItems .product1 .fa-star");
+rateStarsAction(".NewProductItems .product2 .fa-star");
+rateStarsAction(".NewProductItems .product3 .fa-star");
+rateStarsAction(".NewProductItems .product4 .fa-star");
+rateStarsAction(".NewProductItems .product5 .fa-star");
+rateStarsAction(".NewProductItems .product6 .fa-star");
+
+
+// validation of input
+
+
+
+var validationText = document.querySelector(".validation-text");
+var inputToValidate = document.querySelector(".input-needtobe-validated");
+var submitButton = document.querySelector(".submit-button");
+
+submitButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default button click behavior
+    if (!inputToValidate.value.trim()) {
+        validationText.style.display = "block";
+    }else{
+        validationText.style.display = "none";
+
+}})
+
+
+
+function validationInputs(myValidationText,inputValidated) {
+    
+    var validationText = document.querySelector(myValidationText);
+    var inputToValidate = document.querySelector(inputValidated);
+    
+    inputToValidate.addEventListener("keydown",function (e) {
+        if(e.keyCode === 13){
+            e.preventDefault(); // Prevent default button click behavior
+            if (!inputToValidate.value.trim()) {
+                validationText.style.display = "block";
+            }else{
+                validationText.style.display = "none";
+        
+            }}   
+        })
+        
+}
+
+validationInputs('.validation-text','.input-needtobe-validated');
+
+// validation of cart counter
+
+var productButton=document.querySelectorAll(".addToCart-button")
+var cartCounter=document.querySelector(".page-navbar .counter")
+
+cartCounter.innerHTML=(0)
+
+productButton.forEach((el) => {
+    el.addEventListener("click",function () {
+        cartCounter.innerHTML++
+    })    
+});
+
+
+// manage Account Page
+
+var editButton= document.querySelectorAll(".setting-section .fa-pen-to-square")
+editButton.forEach( el => {
+    el.addEventListener("click",function () {
+        var row = this.closest('tr');
+        var content=row.querySelector(".setting-section .content")
+
+        var newContent=prompt("update your data")
+        
+        if(newContent!== null){
+            content.textContent=newContent;
+        }else{
+            content.innerHTML =`Enter data please`
+        }
+    })
+});
+
+
 
