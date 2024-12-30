@@ -1,58 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-do List</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>Todos</h1>
-        </header>
+      <header>
+        <h1>Todos</h1>
+      </header>
 
-        <div class="content">
-            <form action="">
-                <input type="text" id="to-do-input" placeholder="What needs to be done ?">
-            </form>
+      <div class="content">
+        <form action="">
+          <input
+            type="text"
+            id="to-do-input"
+            placeholder="What needs to be done ?"
+          />
+        </form>
 
-            <div class="list">
+        <div class="list">
+          <div id="select-all">
+            <i class="fa-regular fa-square-check select-all-box"></i>
+            <div id="select-all-text">mark all as complete</div>
+          </div>
 
-                <div id="select-all">
-                    <i class="fa-regular fa-square-check select-all-box"></i>
-                    <div id="select-all-text">
-                        mark all as complete
-                    </div>
-                </div>
-
-                <div id="tasks">
-                   
-
-                </div>
-
-                
-                
-            </div>
-            
-            <div id="counter-section">
-                <div id="task-counter">
-                    <span></span> item(s) left
-                </div>
-
-                <div id="delete-counter">
-                    clear <span></span> completed item
-                    
-                </div>
-                
-            </div>
-
-
+          <div id="tasks"></div>
         </div>
+
+        <div id="counter-section">
+          <div id="task-counter"><span></span> item(s) left</div>
+
+          <div id="delete-counter">clear <span></span> completed item</div>
+        </div>
+      </div>
     </div>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
